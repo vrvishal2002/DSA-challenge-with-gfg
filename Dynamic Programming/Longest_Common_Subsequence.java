@@ -1,4 +1,4 @@
-//Longest Increasing Subsequence
+//Longest Common Subsequence
 
 //===========Recursive_solution==============
 class Solution
@@ -22,8 +22,8 @@ class Solution
     }
     
 }
-// Time complexity: O(2^n)
-// Space complexity: O(n) (internal stack space)
+// Time complexity: O(2^max(n,m))
+// Space complexity: O(max(n,m)) (internal stack space)
 
 //=================Dynamic_Programming(Memoization)==================
 
@@ -55,8 +55,8 @@ class Solution
         return lcs_util(s1,s2,n,m,dp);
     }
 }
-// Time complexity: O(n^2)
-// Space complexity: O(n^2)
+// Time complexity: O(n x m)
+// Space complexity: O(n x n)
 
 //=================Dynamic_Programming(Tabulation)==================
 
@@ -78,3 +78,5 @@ class Solution
         return dp[n][m];
     }
 }
+// Time complexity: O(n x m)
+// Space complexity: O(n x n)
